@@ -7,6 +7,18 @@
 
 #include <asm/io.h>
 
+/**
+ * 
+ * param stuff
+ * 
+ */
+
+
+/**
+ * 
+ * Proc stuff
+ * 
+ */
 #define TEST_DRIVER_MAX_SIZE 1024
 
 static struct proc_dir_entry *test_proc = NULL;
@@ -35,6 +47,14 @@ static const struct proc_ops test_proc_ops = {
     .proc_read = test_proc_read, // this function gets executed when the user reads the proc file (e.g. cat /proc/neo-proc).
     .proc_write = test_proc_write, // this function gets executed when the user writes to the proc file (e.g. echo "test" > /proc/neo-proc).
 };
+
+
+
+/**
+ * 
+ * Module init and exit.
+ * 
+ */
 
 static int __init test_driver_init(void)
 {
